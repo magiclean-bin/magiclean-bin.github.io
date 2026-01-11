@@ -19,6 +19,7 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
@@ -42,6 +43,7 @@
       color: #000;
     }
 
+    /* HERO */
     .hero {
       padding: 80px 60px;
       display: grid;
@@ -61,6 +63,13 @@
       margin-bottom: 30px;
     }
 
+    .hero img {
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+    }
+
+    /* BUTTON */
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -69,12 +78,6 @@
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
-    }
-
-    .hero img {
-      width: 100%;
-      max-width: 420px;
-      margin: auto;
     }
 
     section {
@@ -94,6 +97,7 @@
       color: #555;
     }
 
+    /* FEATURES */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -107,6 +111,7 @@
       text-align: center;
     }
 
+    /* PRODUCTS */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -120,9 +125,11 @@
       text-align: center;
     }
 
+    /* 🔥 TODAS LAS IMÁGENES MISMO TAMAÑO */
     .product img {
       width: 100%;
-      max-width: 260px;
+      height: 260px;
+      object-fit: contain;
       margin-bottom: 20px;
     }
 
@@ -142,6 +149,7 @@
       color: #444;
     }
 
+    /* HIGHLIGHT */
     .highlight {
       background: #f7f7f7;
       border-radius: 12px;
@@ -156,15 +164,21 @@
       color: #666;
       font-size: 14px;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <!-- LOGO -->
   <img src="1.png" alt="MagiClean Logo">
-
   <nav>
     <a href="#producto">Producto</a>
     <a href="#modelos">Modelos</a>
@@ -183,8 +197,7 @@
     <a href="#modelos" class="btn">Ver modelos</a>
   </div>
 
-  <!-- IMAGEN PRINCIPAL -->
-  <img src="1.png" alt="MagiClean Bin">
+  <img src="2.png" alt="MagiClean Bin">
 </section>
 
 <section id="producto">
@@ -198,22 +211,19 @@
   <div class="features">
     <div class="feature-box">
       <h3>Auto-vaciado</h3>
-      <p>La basura desaparece automáticamente cuando la papelera se llena.</p>
+      <p>La basura desaparece automáticamente cuando se llena.</p>
     </div>
-
     <div class="feature-box">
-      <h3>Recuperación inteligente</h3>
-      <p>Recupera basura hasta 2 días y objetos valiosos hasta 2 semanas.</p>
+      <h3>Recuperación</h3>
+      <p>Hasta 2 días y objetos valiosos hasta 2 semanas.</p>
     </div>
-
     <div class="feature-box">
       <h3>Sin olores</h3>
-      <p>Diseñada para mantener tu hogar limpio y sin malos olores.</p>
+      <p>Hogar limpio y sin malos olores.</p>
     </div>
-
     <div class="feature-box">
-      <h3>Control total</h3>
-      <p>App disponible para móvil y ordenador, desde cualquier lugar.</p>
+      <h3>App total</h3>
+      <p>Control desde cualquier dispositivo.</p>
     </div>
   </div>
 </section>
@@ -223,55 +233,40 @@
 
   <div class="products">
 
-    <!-- MODELO BÁSICO -->
     <div class="product">
-      <img src="2.png" alt="MagiClean Básico">
+      <img src="2.png" alt="Modelo Básico">
       <h3>Modelo Básico</h3>
       <p class="price">180€</p>
-
       <ul>
         <li>✔ Auto-vaciado</li>
-        <li>✔ Recuperación hasta 2 días</li>
-        <li>✔ Alertas de objetos valiosos</li>
+        <li>✔ Recuperación 2 días</li>
         <li>✔ App multiplataforma</li>
-        <li>✔ Colores: azul, gris, negro, blanco y beige</li>
+        <li>✔ 5 colores disponibles</li>
       </ul>
-
-      <p>Instalación opcional: +10–20€</p>
       <a href="#" class="btn">Comprar</a>
     </div>
 
-    <!-- MODELO PREMIUM -->
     <div class="product">
-      <img src="3.png" alt="MagiClean Premium">
+      <img src="3.png" alt="Modelo Premium">
       <h3>Modelo Premium</h3>
       <p class="price">250€</p>
-
       <ul>
-        <li>✔ Todo lo del modelo básico</li>
         <li>✔ Diseño futurista</li>
         <li>✔ Materiales premium</li>
-        <li>✔ Experiencia mágica mejorada</li>
+        <li>✔ Experiencia mágica</li>
       </ul>
-
-      <p>Instalación opcional: +10–20€</p>
       <a href="#" class="btn">Comprar</a>
     </div>
 
-    <!-- PREMIUM + ROOMBA -->
     <div class="product">
-      <img src="4.png" alt="MagiClean Premium Roomba Edition">
+      <img src="4.png" alt="Premium Roomba Edition">
       <h3>Premium Roomba Edition</h3>
       <p class="price">300€</p>
-
       <ul>
-        <li>✔ Todo lo del modelo premium</li>
         <li>✔ Roomba integrado</li>
-        <li>✔ Aspirado y fregado automático</li>
-        <li>✔ Vaciado completamente autónomo</li>
+        <li>✔ Aspirado y fregado</li>
+        <li>✔ 100% automático</li>
       </ul>
-
-      <p>Instalación opcional: +10–20€</p>
       <a href="#" class="btn">Comprar</a>
     </div>
 
@@ -279,24 +274,15 @@
 </section>
 
 <section class="highlight" id="app">
-  <h2>Controla MagiClean desde cualquier lugar</h2>
+  <h2>Control total desde cualquier lugar</h2>
   <p>
-    Compatible con Android, iOS, Windows, macOS y Linux.<br>
-    Próximamente con Alexa, Google Home y Apple HomePod.
+    Android · iOS · Windows · macOS · Linux<br>
+    Próximamente Alexa, Google Home y HomePod
   </p>
-</section>
-
-<section class="highlight" id="comprar">
-  <h2>Tira y listo, así de limpio</h2>
-  <p>
-    Tira sin pensar, y la basura va a volar.<br>
-    MagiClean Bin. Limpia sin fin.
-  </p>
-  <a href="#" class="btn">Comprar ahora</a>
 </section>
 
 <footer>
-  © 2026 MagiClean · Limpia sin Fin.
+  © 2026 MagiClean · Limpia sin Fin
 </footer>
 
 </body>
