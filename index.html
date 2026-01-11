@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagiClean Bin | Limpia sin fin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .hero {
+      padding: 80px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #555;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 260px;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .highlight {
+      background: #f7f7f7;
+      border-radius: 12px;
+      padding: 60px;
+      text-align: center;
+    }
+
+    footer {
+      background: #f7f7f7;
+      padding: 30px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <!-- LOGO -->
+  <img src="1.png" alt="MagiClean Logo">
+
+  <nav>
+    <a href="#producto">Producto</a>
+    <a href="#modelos">Modelos</a>
+    <a href="#app">App</a>
+    <a href="#comprar">Comprar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>MagiClean Bin<br>Limpia sin fin</h2>
+    <p>
+      La papelera inteligente que se vacía sola, elimina olores
+      y hace que tirar la basura sea completamente automático.
+    </p>
+    <a href="#modelos" class="btn">Ver modelos</a>
+  </div>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <img src="1.png" alt="MagiClean Bin">
+</section>
+
+<section id="producto">
+  <h2 class="section-title">¿Qué es la MagiClean Bin?</h2>
+  <p class="section-subtitle">
+    Llevamos entre 2 y 3 años creando el cubo de basura perfecto.
+    MagiClean automatiza por completo la basura para que no tengas
+    que hacer ningún esfuerzo.
+  </p>
+
+  <div class="features">
+    <div class="feature-box">
+      <h3>Auto-vaciado</h3>
+      <p>La basura desaparece automáticamente cuando la papelera se llena.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Recuperación inteligente</h3>
+      <p>Recupera basura hasta 2 días y objetos valiosos hasta 2 semanas.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Sin olores</h3>
+      <p>Diseñada para mantener tu hogar limpio y sin malos olores.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Control total</h3>
+      <p>App disponible para móvil y ordenador, desde cualquier lugar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="modelos">
+  <h2 class="section-title">Nuestros modelos</h2>
+
+  <div class="products">
+
+    <!-- MODELO BÁSICO -->
+    <div class="product">
+      <img src="2.png" alt="MagiClean Básico">
+      <h3>Modelo Básico</h3>
+      <p class="price">180€</p>
+
+      <ul>
+        <li>✔ Auto-vaciado</li>
+        <li>✔ Recuperación hasta 2 días</li>
+        <li>✔ Alertas de objetos valiosos</li>
+        <li>✔ App multiplataforma</li>
+        <li>✔ Colores: azul, gris, negro, blanco y beige</li>
+      </ul>
+
+      <p>Instalación opcional: +10–20€</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <!-- MODELO PREMIUM -->
+    <div class="product">
+      <img src="3.png" alt="MagiClean Premium">
+      <h3>Modelo Premium</h3>
+      <p class="price">250€</p>
+
+      <ul>
+        <li>✔ Todo lo del modelo básico</li>
+        <li>✔ Diseño futurista</li>
+        <li>✔ Materiales premium</li>
+        <li>✔ Experiencia mágica mejorada</li>
+      </ul>
+
+      <p>Instalación opcional: +10–20€</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+    <!-- PREMIUM + ROOMBA -->
+    <div class="product">
+      <img src="4.png" alt="MagiClean Premium Roomba Edition">
+      <h3>Premium Roomba Edition</h3>
+      <p class="price">300€</p>
+
+      <ul>
+        <li>✔ Todo lo del modelo premium</li>
+        <li>✔ Roomba integrado</li>
+        <li>✔ Aspirado y fregado automático</li>
+        <li>✔ Vaciado completamente autónomo</li>
+      </ul>
+
+      <p>Instalación opcional: +10–20€</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="highlight" id="app">
+  <h2>Controla MagiClean desde cualquier lugar</h2>
+  <p>
+    Compatible con Android, iOS, Windows, macOS y Linux.<br>
+    Próximamente con Alexa, Google Home y Apple HomePod.
+  </p>
+</section>
+
+<section class="highlight" id="comprar">
+  <h2>Tira y listo, así de limpio</h2>
+  <p>
+    Tira sin pensar, y la basura va a volar.<br>
+    MagiClean Bin. Limpia sin fin.
+  </p>
+  <a href="#" class="btn">Comprar ahora</a>
+</section>
+
+<footer>
+  © 2026 MagiClean · Limpia sin Fin.
+</footer>
+
+</body>
+</html>
