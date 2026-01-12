@@ -19,6 +19,7 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
@@ -28,7 +29,7 @@
     }
 
     header img {
-      height: 40px;
+      height: 32px;
     }
 
     nav a {
@@ -38,52 +39,31 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #000;
-    }
-
-    /* CERTIFICACIONES */
-    .certificaciones {
-      padding: 60px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    .certificaciones h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-
-    .certificaciones img {
-      width: 100%;
-      max-width: 500px;   /* 🔥 MÁS GRANDE */
-      height: auto;
-      object-fit: contain;
-    }
-
+    /* HERO */
     .hero {
-      padding: 80px 60px;
+      padding: 90px 60px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
       align-items: center;
     }
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+    .hero-text h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 18px;
+    .hero-text h2 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      font-size: 17px;
       color: #555;
-      margin-bottom: 30px;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 420px;
-      object-fit: contain;
+      max-width: 520px;
+      margin-bottom: 26px;
     }
 
     .btn {
@@ -96,6 +76,28 @@
       font-weight: 600;
     }
 
+    /* CERTIFICACIONES */
+    .hero-cert {
+      margin-top: 45px;
+    }
+
+    .hero-cert h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .hero-cert img {
+      width: 500px;
+      max-width: 100%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 420px;
+      object-fit: contain;
+    }
+
+    /* SECCIONES */
     section {
       padding: 80px 60px;
     }
@@ -103,61 +105,58 @@
     .section-title {
       font-size: 32px;
       margin-bottom: 20px;
-      text-align: center;
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 50px;
+    .section-text {
+      max-width: 800px;
       color: #555;
+      font-size: 17px;
     }
 
-    /* PRODUCTS */
+    .section-text p {
+      margin-bottom: 18px;
+    }
+
+    /* MODELOS */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 40px;
     }
 
     .product {
       border: 1px solid #ddd;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 30px;
-      text-align: left; /* 👈 INFO CLARA */
     }
 
     .product img {
       width: 100%;
-      height: 260px;
+      height: 240px;
       object-fit: contain;
       margin-bottom: 20px;
-    }
-
-    .product h3 {
-      margin-bottom: 10px;
     }
 
     .price {
       font-size: 28px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin: 10px 0 15px;
     }
 
     .product ul {
       list-style: none;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
     .product ul li {
       margin-bottom: 8px;
       color: #444;
-      font-size: 15px;
     }
 
+    /* FOOTER */
     footer {
       background: #f7f7f7;
-      padding: 40px;
+      padding: 50px 40px;
       text-align: center;
       color: #555;
       font-size: 14px;
@@ -167,10 +166,84 @@
       margin: 6px 0;
     }
 
+    .pago-seguro {
+      margin-top: 25px;
+    }
+
+    .pago-seguro img {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    /* ========================= */
+    /* 📱 RESPONSIVE (MÓVIL) */
+    /* ========================= */
     @media (max-width: 900px) {
+
+      header {
+        padding: 16px 20px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
       .hero {
+        padding: 60px 20px;
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text h2 {
+        font-size: 22px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+        max-width: 100%;
+      }
+
+      .hero-cert img {
+        width: 100%;
+      }
+
+      .hero-image img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product {
+        padding: 24px;
+      }
+
+      .product img {
+        height: 220px;
+      }
+
+      footer {
+        padding: 40px 20px;
+      }
+
+      .pago-seguro img {
+        max-width: 260px;
       }
     }
   </style>
@@ -187,39 +260,59 @@
   </nav>
 </header>
 
-<!-- CERTIFICACIONES -->
-<div class="certificaciones">
-  <h2>Comprometidos con el medio ambiente</h2>
-  <img src="https://magiclean-bin.github.io/certificaciones.png" alt="Certificaciones">
-</div>
-
+<!-- HERO -->
 <section class="hero">
-  <div>
-    <h2>MagiClean Bin<br>Limpia sin fin</h2>
+  <div class="hero-text">
+    <h1>MagiClean Bin</h1>
+    <h2>Limpia sin fin</h2>
+
     <p>
       La papelera inteligente que se vacía sola, elimina olores
-      y hace que tirar la basura sea completamente automático.
+      y automatiza por completo la gestión de residuos.
     </p>
+
     <a href="#modelos" class="btn">Ver modelos</a>
+
+    <div class="hero-cert">
+      <h3>Comprometidos con el medio ambiente</h3>
+      <img src="https://magiclean-bin.github.io/certificaciones.png">
+    </div>
   </div>
 
-  <img src="https://magiclean-bin.github.io/1.png" alt="MagiClean Bin">
+  <div class="hero-image">
+    <img src="https://magiclean-bin.github.io/1.png">
+  </div>
 </section>
 
+<!-- QUE ES -->
 <section id="producto">
   <h2 class="section-title">¿Qué es la MagiClean Bin?</h2>
-  <p class="section-subtitle">
-    Una solución inteligente creada para automatizar la basura,
-    ahorrar tiempo y mantener tu hogar limpio sin esfuerzo.
-  </p>
+
+  <div class="section-text">
+    <p>
+      Llevamos entre 2 y 3 años intentando crear el cubo de basura perfecto,
+      al que no le hace falta ningún esfuerzo después de la instalación.
+    </p>
+
+    <p>
+      De eso trata la compañía MagiClean: facilitar la vida de los demás
+      haciendo que sacar la basura sea más fácil automatizándola.
+    </p>
+
+    <p>
+      La llamamos <strong>MagiClean Bin</strong>. Puedes tirar cualquier cosa
+      y, si tiraste algo por error y quieres recuperarlo, es tan fácil como
+      pulsar un botón físico o hacerlo desde la aplicación.
+    </p>
+  </div>
 </section>
 
+<!-- MODELOS -->
 <section id="modelos">
   <h2 class="section-title">Nuestros modelos</h2>
 
   <div class="products">
 
-    <!-- BÁSICO -->
     <div class="product">
       <img src="https://magiclean-bin.github.io/2.png">
       <h3>Modelo Básico</h3>
@@ -234,7 +327,6 @@
       <a href="#" class="btn">Comprar</a>
     </div>
 
-    <!-- PREMIUM -->
     <div class="product">
       <img src="https://magiclean-bin.github.io/3.png">
       <h3>Modelo Premium</h3>
@@ -248,7 +340,6 @@
       <a href="#" class="btn">Comprar</a>
     </div>
 
-    <!-- ROOMBA -->
     <div class="product">
       <img src="https://magiclean-bin.github.io/4.png">
       <h3>Premium Roomba Edition</h3>
@@ -265,12 +356,18 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer id="contacto">
   <p><strong>MagiClean</strong></p>
   <p>📍 Calle Innovación 12, 28000 Madrid, España</p>
   <p>📞 +34 600 123 456</p>
   <p>✉️ contacto@magiclean.com</p>
-  <p>© 2026 MagiClean · Limpia sin Fin</p>
+
+  <div class="pago-seguro">
+    <img src="https://magiclean-bin.github.io/pago.png" alt="Pago seguro garantizado">
+  </div>
+
+  <p style="margin-top:20px;">© 2026 MagiClean · Limpia sin fin</p>
 </footer>
 
 </body>
