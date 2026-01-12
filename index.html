@@ -19,7 +19,6 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
@@ -43,7 +42,25 @@
       color: #000;
     }
 
-    /* HERO */
+    /* CERTIFICACIONES */
+    .certificaciones {
+      padding: 60px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .certificaciones h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .certificaciones img {
+      width: 100%;
+      max-width: 500px;   /* 🔥 MÁS GRANDE */
+      height: auto;
+      object-fit: contain;
+    }
+
     .hero {
       padding: 80px 60px;
       display: grid;
@@ -69,7 +86,6 @@
       object-fit: contain;
     }
 
-    /* BUTTON */
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -97,20 +113,6 @@
       color: #555;
     }
 
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-
-    .feature-box {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 25px;
-      text-align: center;
-    }
-
     /* PRODUCTS */
     .products {
       display: grid;
@@ -122,10 +124,9 @@
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 30px;
-      text-align: center;
+      text-align: left; /* 👈 INFO CLARA */
     }
 
-    /* 🔥 TODAS LAS IMÁGENES MISMO TAMAÑO */
     .product img {
       width: 100%;
       height: 260px;
@@ -133,39 +134,39 @@
       margin-bottom: 20px;
     }
 
+    .product h3 {
+      margin-bottom: 10px;
+    }
+
     .price {
       font-size: 28px;
       font-weight: bold;
-      margin: 15px 0;
+      margin-bottom: 15px;
     }
 
-    ul {
+    .product ul {
       list-style: none;
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
 
-    ul li {
+    .product ul li {
       margin-bottom: 8px;
       color: #444;
-    }
-
-    /* HIGHLIGHT */
-    .highlight {
-      background: #f7f7f7;
-      border-radius: 12px;
-      padding: 60px;
-      text-align: center;
+      font-size: 15px;
     }
 
     footer {
       background: #f7f7f7;
-      padding: 30px;
+      padding: 40px;
       text-align: center;
-      color: #666;
+      color: #555;
       font-size: 14px;
     }
 
-    /* RESPONSIVE */
+    footer p {
+      margin: 6px 0;
+    }
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -178,14 +179,19 @@
 <body>
 
 <header>
-  <img src="1.png" alt="MagiClean Logo">
+  <img src="https://magiclean-bin.github.io/1.png" alt="MagiClean Logo">
   <nav>
     <a href="#producto">Producto</a>
     <a href="#modelos">Modelos</a>
-    <a href="#app">App</a>
-    <a href="#comprar">Comprar</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 </header>
+
+<!-- CERTIFICACIONES -->
+<div class="certificaciones">
+  <h2>Comprometidos con el medio ambiente</h2>
+  <img src="https://magiclean-bin.github.io/certificaciones.png" alt="Certificaciones">
+</div>
 
 <section class="hero">
   <div>
@@ -197,35 +203,15 @@
     <a href="#modelos" class="btn">Ver modelos</a>
   </div>
 
-  <img src="1.png" alt="MagiClean Bin">
+  <img src="https://magiclean-bin.github.io/1.png" alt="MagiClean Bin">
 </section>
 
 <section id="producto">
   <h2 class="section-title">¿Qué es la MagiClean Bin?</h2>
   <p class="section-subtitle">
-    Llevamos entre 2 y 3 años creando el cubo de basura perfecto.
-    MagiClean automatiza por completo la basura para que no tengas
-    que hacer ningún esfuerzo.
+    Una solución inteligente creada para automatizar la basura,
+    ahorrar tiempo y mantener tu hogar limpio sin esfuerzo.
   </p>
-
-  <div class="features">
-    <div class="feature-box">
-      <h3>Auto-vaciado</h3>
-      <p>La basura desaparece automáticamente cuando se llena.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Recuperación</h3>
-      <p>Hasta 2 días y objetos valiosos hasta 2 semanas.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Sin olores</h3>
-      <p>Hogar limpio y sin malos olores.</p>
-    </div>
-    <div class="feature-box">
-      <h3>App total</h3>
-      <p>Control desde cualquier dispositivo.</p>
-    </div>
-  </div>
 </section>
 
 <section id="modelos">
@@ -233,39 +219,45 @@
 
   <div class="products">
 
+    <!-- BÁSICO -->
     <div class="product">
-      <img src="2.png" alt="Modelo Básico">
+      <img src="https://magiclean-bin.github.io/2.png">
       <h3>Modelo Básico</h3>
       <p class="price">180€</p>
       <ul>
-        <li>✔ Auto-vaciado</li>
-        <li>✔ Recuperación 2 días</li>
-        <li>✔ App multiplataforma</li>
-        <li>✔ 5 colores disponibles</li>
+        <li>✔ Auto-vaciado de basura</li>
+        <li>✔ Recuperación de basura hasta 2 días</li>
+        <li>✔ Alertas de objetos valiosos (2 semanas)</li>
+        <li>✔ App para móvil y ordenador</li>
+        <li>✔ Colores: azul, gris, negro, blanco y beige</li>
       </ul>
       <a href="#" class="btn">Comprar</a>
     </div>
 
+    <!-- PREMIUM -->
     <div class="product">
-      <img src="3.png" alt="Modelo Premium">
+      <img src="https://magiclean-bin.github.io/3.png">
       <h3>Modelo Premium</h3>
       <p class="price">250€</p>
       <ul>
+        <li>✔ Todo lo incluido en el modelo básico</li>
         <li>✔ Diseño futurista</li>
         <li>✔ Materiales premium</li>
-        <li>✔ Experiencia mágica</li>
+        <li>✔ Experiencia mágica mejorada</li>
       </ul>
       <a href="#" class="btn">Comprar</a>
     </div>
 
+    <!-- ROOMBA -->
     <div class="product">
-      <img src="4.png" alt="Premium Roomba Edition">
+      <img src="https://magiclean-bin.github.io/4.png">
       <h3>Premium Roomba Edition</h3>
       <p class="price">300€</p>
       <ul>
+        <li>✔ Todo lo del modelo premium</li>
         <li>✔ Roomba integrado</li>
-        <li>✔ Aspirado y fregado</li>
-        <li>✔ 100% automático</li>
+        <li>✔ Aspirado y fregado automático</li>
+        <li>✔ Vaciado completamente autónomo</li>
       </ul>
       <a href="#" class="btn">Comprar</a>
     </div>
@@ -273,16 +265,12 @@
   </div>
 </section>
 
-<section class="highlight" id="app">
-  <h2>Control total desde cualquier lugar</h2>
-  <p>
-    Android · iOS · Windows · macOS · Linux<br>
-    Próximamente Alexa, Google Home y HomePod
-  </p>
-</section>
-
-<footer>
-  © 2026 MagiClean · Limpia sin Fin
+<footer id="contacto">
+  <p><strong>MagiClean</strong></p>
+  <p>📍 Calle Innovación 12, 28000 Madrid, España</p>
+  <p>📞 +34 600 123 456</p>
+  <p>✉️ contacto@magiclean.com</p>
+  <p>© 2026 MagiClean · Limpia sin Fin</p>
 </footer>
 
 </body>
